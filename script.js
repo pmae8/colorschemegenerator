@@ -1,11 +1,7 @@
 document.getElementById('generate-btn').addEventListener('click', function() {
     const seedColor = document.getElementById('seed-color').value;
     const schemeMode = document.getElementById('scheme-mode').value;
-    const colorCount = schemeMode === 'mono' ? 10 : 5;  // Request more colors for monochrome
-
-    // Update seed color input background to make it more visible
-    document.getElementById('seed-color').style.backgroundColor = seedColor;
-    document.getElementById('seed-color').style.border = `3px solid ${seedColor}`;
+    const colorCount = schemeMode === 'mono' ? 10 : 5;
 
     fetch(`https://www.thecolorapi.com/scheme?hex=${seedColor.slice(1)}&mode=${schemeMode}&count=${colorCount}`)
         .then(response => response.json())
