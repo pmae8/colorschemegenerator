@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Scheme Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Color Scheme Generator</h1>
+        <div class="content">
+            <input type="color" id="seed-color" value="#ff0000" />
+
+            <select id="scheme-mode">
+                <option value="mono">Monochrome</option>
+                <option value="analogic">Analogic</option>
+                <option value="complement">Complementary</option>
+                <option value="triad">Triad</option>
+                <option value="quad">Tetradic</option>
+            </select>
+            <button id="generate-btn">Generate Color Scheme</button>
+        </div> 
+
+
+        <div class="color-display" id="color-display"></div>
+        <div id="copy-msg">Copied to clipboard!</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
